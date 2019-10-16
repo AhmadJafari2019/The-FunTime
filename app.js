@@ -6,9 +6,33 @@ roundScore = 0;
 activePlayer = 1;
 dice = Math.floor(Math.random() * 6) + 1;
 
-document.querySelector("#current-" + activePlayer).textContent = dice;
 
-var x = document.querySelector('#current-0').textContent;
-console.log(x);
+// Setting an event handler
+document.querySelector('.btn-roll').addEventListener('click', function() {
+    // Random Number.
+    dice = Math.floor(Math.random() * 6) + 1;
+    //Display the result
+    var diceDom = document.querySelector('.dice');
+    diceDom.style.display = 'block';
+    diceDom.src = 'dice-' + dice + '.png';
+    // Update the round score if the rolled Number was not a 1
 
-document.querySelector('.dice').style.display = 'none';
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// document.querySelector("#current-" + activePlayer).textContent = dice;
+
+// var x = document.querySelector('#current-0').textContent;
+// console.log(x);
