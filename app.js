@@ -1,17 +1,10 @@
 // Declaring some Variable for the score of each Player.
 var scores, roundScore, activePlayer;
+init();
 
-scores = [0, 0];
-roundScore = 0;
-activePlayer = 0;
 dice = Math.floor(Math.random() * 6) + 1;
 
-document.querySelector('.dice').style.display = 'none';
 
-document.getElementById('score-0').textContent = '0';
-document.getElementById('score-1').textContent = '0';
-document.getElementById('current-0').textContent = '0';
-document.getElementById('current-1').textContent = '0';
 // Setting an event handler
 document.querySelector('.btn-roll').addEventListener('click', function() {
     // Random Number.
@@ -64,8 +57,22 @@ function nextPlayer() {
     document.querySelector('.dice').style.display = 'none';
 }
 
+document.querySelector('.btn-new').addEventListener('click', init);
 
+function init() {
+    scores = [0, 0];
+    roundScore = 0;
+    activePlayer = 0;
+    document.querySelector('.dice').style.display = 'none';
 
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+
+}
 
 
 
