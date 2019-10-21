@@ -10,6 +10,11 @@
     padding: 10px;
     width: 160px;
     text-transform: uppercase;
+    border: 2px solid purple;
+}
+
+.final-score:hover {
+    border-width: 10px;
 }
 
 .final-score:focus {
@@ -190,5 +195,3 @@ i {
     font-weight: 300;
     color: #EB4D4D;
 }
-
-
